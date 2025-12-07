@@ -1,0 +1,203 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Astha Awasthi — Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    :root{
+      --bg:#f6f8fc;
+      --text:#1a1a1a;
+      --muted:#5f6368;
+      --card-bg:#ffffff;
+      --accent:#6366f1;
+      --accent-light:#a5b4ff;
+      --radius:14px;
+      --shadow:0 8px 22px rgba(0,0,0,0.08);
+      --max-width:900px;
+    }
+
+    *{margin:0;padding:0;box-sizing:border-box;font-family:'Inter',sans-serif;}
+    body{
+      background:var(--bg);
+      color:var(--text);
+      padding:32px;
+      display:flex;
+      justify-content:center;
+      animation:fadeIn 0.8s ease-in;
+    }
+
+    @keyframes fadeIn{from{opacity:0}to{opacity:1}}
+    @keyframes slideDown{from{transform:translateY(-12px);opacity:0}to{transform:translateY(0);opacity:1}}
+    @keyframes fadeUp{from{transform:translateY(10px);opacity:0}to{transform:translateY(0);opacity:1}}
+    @keyframes pulse{
+      0%{transform:scale(1);}
+      50%{transform:scale(1.02);}
+      100%{transform:scale(1);}
+    }
+
+    .container{max-width:var(--max-width);width:100%}
+
+    header{
+      background:linear-gradient(135deg,#6366f1,#8b5cf6);
+      padding:36px;
+      border-radius:var(--radius);
+      color:white;
+      box-shadow:var(--shadow);
+      animation:slideDown 0.7s ease-out;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    header:hover{
+      transform:translateY(-4px);
+      box-shadow:0 12px 28px rgba(0,0,0,0.12);
+    }
+
+    header h1{font-size:38px;font-weight:700;margin-bottom:8px}
+    header p{color:rgba(255,255,255,0.9);margin-bottom:6px}
+    header a{color:#fff;text-decoration:none;font-weight:500}
+    header a:hover{opacity:0.8;transform:scale(1.05);transition:0.2s ease}
+
+    .section{
+      margin-top:40px;
+      padding:28px;
+      background:var(--card-bg);
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+      animation:fadeUp 0.6s ease-out;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .section:hover{
+      transform:translateY(-4px);
+      box-shadow:0 12px 28px rgba(0,0,0,0.12);
+    }
+
+    h2{
+      font-size:22px;
+      font-weight:600;
+      margin-bottom:12px;
+      color:var(--accent);
+      position:relative;
+    }
+    h2::after{
+      content:"";
+      position:absolute;
+      width:50px;
+      height:3px;
+      background:var(--accent-light);
+      left:0;
+      bottom:-6px;
+      border-radius:2px;
+      animation:slideDown 0.5s ease-out;
+    }
+
+    .project-card{
+      padding:14px 0;
+      border-bottom:1px solid #e5e7eb;
+      transition:transform 0.3s ease, background 0.3s ease;
+    }
+    .project-card:last-child{border-bottom:none}
+    .project-card strong{font-size:17px;color:#111}
+    .project-card:hover{
+      transform:translateX(6px);
+      background:rgba(99,102,241,0.05);
+      animation:pulse 0.6s ease;
+    }
+
+    footer{
+      text-align:center;
+      margin-top:40px;
+      color:var(--muted);
+      font-size:14px;
+      letter-spacing:0.5px;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+
+    <!-- HEADER -->
+    <header>
+      <h1>Astha Awasthi</h1>
+      <p>Software Development Engineer — Backend | Distributed Systems</p>
+      <p><a href="mailto:awasthi.astha.08100807@gmail.com">awasthi.astha.08100807@gmail.com</a></p>
+      <p>
+        <a href="https://www.linkedin.com/in/astha-awasthi08/" target="_blank">LinkedIn</a> ·
+        <a href="https://github.com/Aasthaawasthi0807" target="_blank">GitHub</a> ·
+        <a href="https://leetcode.com/u/astha0807/" target="_blank">LeetCode</a>
+      </p>
+    </header>
+
+    <!-- SUMMARY -->
+    <section class="section">
+      <h2>Summary</h2>
+      <p>Software Engineer with 2+ years of experience building backend systems, scalable services, and distributed components. Strong in Python, Java, C/C++, concurrency, system design, microservices, and cloud platforms.</p>
+    </section>
+
+    <!-- EXPERIENCE -->
+    <section class="section">
+      <h2>Work Experience</h2>
+
+      <div class="project-card">
+        <strong>Software Engineer — Cisco</strong> (Aug 2023 — Present)<br>
+        <p>Developed scalable backend components for Cisco FMC, optimizing API workflows and configuration handling. Built automation workflows using REST APIs, Postman, JavaScript & Python. Improved backend logic through debugging, data parsing, and policy-management enhancements. Contributed to reliable CI/CD pipelines and reduced latency by ~40%.</p>
+      </div>
+
+      <div class="project-card">
+        <strong>Software Engineer Intern — Cisco</strong> (Jan 2023 — Jun 2023)<br>
+        <p>Optimized FMC backend APIs, automated configuration flows using REST APIs, and enhanced policy-management reliability. Built scalable Postman collections for automated testing and regression coverage.</p>
+      </div>
+
+      <div class="project-card">
+        <strong>Backend Developer Intern — Cuvette</strong> (Jul 2022 — Dec 2022)<br>
+        <p>Developed backend features using Django & REST APIs, optimized database queries for performance, and contributed to responsive UI components using HTML, CSS, and JavaScript.</p>
+      </div>
+    </section>
+
+    <!-- PROJECTS -->
+    <section class="section">
+      <h2>Key Projects</h2>
+
+      <div class="project-card">
+        <strong>Distributed Task Scheduler</strong>
+        <p>Java · Spring Boot · Kafka · Redis </p>
+        <p>Designed and built a horizontally scalable distributed job scheduler supporting retries, priority queues, worker autoscaling, distributed locking, and end-to-end task tracking. Reduced job delays by 40% and improved reliability across multi-node deployments.</p>
+      </div>
+
+      <div class="project-card">
+        <strong>Real-Time Log Monitoring & Alerting System</strong>
+        <p>Python · FastAPI · Redis Streams </p>
+        <p>Built a real-time log ingestion and alerting system with sub-second latency. Implemented pattern-based alert rules, async log processors, and Slack/Email alert routing. Enabled fault-tolerant ingestion across services.</p>
+      </div>
+
+      <div class="project-card">
+        <strong>Intelligent Log Anomaly Detector</strong>
+        <p>Python · ML · Scikit-learn </p>
+        <p>Implemented ML-based anomaly detection pipeline using TF-IDF and supervised models. Integrated with real-time Kafka pipeline for on-the-fly inference. Improved precision by 12% and reduced Mean-Time-To-Detect incidents by ~40%.</p>
+      </div>
+    </section>
+
+    <!-- SKILLS -->
+    <section class="section">
+      <h2>Technical Skills</h2>
+      <p>Java · Python · C/C++ · Distributed Systems · Microservices · Spring Boot · Docker · Kubernetes · Kafka · Redis · SQL · Linux · Algorithms · Data Structures</p>
+    </section>
+
+    <!-- EDUCATION -->
+    <section class="section">
+      <h2>Education</h2>
+      <p><strong>B.Tech — Information Technology</strong><br>Gyan Ganga Institute of Technology and Sciences · 2019–2023 · GPA: 8.69</p>
+    </section>
+
+    <footer>
+      <p>© <span id="year"></span> Astha Awasthi</p>
+    </footer>
+  </div>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
